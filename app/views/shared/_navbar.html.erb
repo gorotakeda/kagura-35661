@@ -17,12 +17,14 @@
         <div class="navbar-end">
             <a class="navbar-item"></a>
             <a class="navbar-item"></a>
+            <% if (!user_signed_in?) %>
             <div class="navbar-item">
                 <div class="buttons">
                     <a class="button is-white">新規ユーザ登録</a>
                     <a class="button is-white">ログイン</a>
                 </div>
             </div>
+            <% else %>
             <div class="navbar-item has-dropdown is-hoverable" style="margin-right: 100px;">
                 <a class="navbar-item"></a>
                 <div class="navbar-dropdown">
@@ -32,6 +34,7 @@
                     <a href="" class="navbar-item">ログアウト</a>
                 </div>
             </div>
+            <% end %>
         </div>
     </div>
 </nav>
